@@ -1,6 +1,7 @@
 background yes
 update_interval 2.0
 total_run_times 0
+use_xft yes
 own_window yes
 own_window_transparent yes
 own_window_type normal
