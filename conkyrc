@@ -39,6 +39,7 @@ CPU4: ${cpu cpu4} % ${cpubar cpu4}
 CPU5: ${cpu cpu5} % ${cpubar cpu5}
 CPU6: ${cpu cpu6} % ${cpubar cpu6}
 CPU7: ${cpu cpu7} % ${cpubar cpu7}
+CPU8: ${cpu cpu8} % ${cpubar cpu8}
 
 ${font sans-serif:bold:size=8}${color FFCC00}TOP PROCS (CPU) $stippled_hr
 ${font sans-serif:normal:size=8}${color FFFFCC}${top name 1} $alignr ${top cpu 1} %
@@ -54,6 +55,12 @@ ${top_mem name 3} $alignr ${top_mem mem 3} %
 ${top_mem name 4} $alignr ${top_mem mem 4} %
 ${top_mem name 5} $alignr ${top_mem mem 5} %
 
+${font sans-serif:bold:size=8}${color FFCC00}MEMORY $stippled_hr
+${font sans-serif:normal:size=8}${color FFFFCC}RAM $alignc $mem / $memmax $alignr $memperc %
+
+${font sans-serif:bold:size=8}${color FFCC00}DISK SPACE $stippled_hr
+${font sans-serif:normal:size=8}${color FFFFCC}/ $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /} %
+
 ${font sans-serif:bold:size=8}${color FFCC00}DISK I/O $stippled_hr
 ${font sans-serif:normal:size=8}${color FFFFCC}Read: $alignr $diskio_read
 ${diskiograph_read}
@@ -65,11 +72,3 @@ ${font sans-serif:normal:size=8}${color FFFFCC}Download: $alignr ${downspeed eth
 ${downspeedgraph eth0}
 ${font sans-serif:normal:size=8}${color FFFFCC}Upload: $alignr ${upspeed eth0}/s
 ${upspeedgraph eth0}
-
-${font sans-serif:bold:size=8}${color FFCC00}MEMORY $stippled_hr
-${font sans-serif:normal:size=8}${color FFFFCC}RAM $alignc $mem / $memmax $alignr $memperc %
-${membar}
-
-${font sans-serif:bold:size=8}${color FFCC00}DISK SPACE $stippled_hr
-${font sans-serif:normal:size=8}${color FFFFCC}/ $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /} %
-${fs_bar /}
