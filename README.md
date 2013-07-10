@@ -5,4 +5,5 @@ Conky Configurations
 
 ----
 
-![conky](https://raw.github.com/cgoldberg/conky-config/master/conky_2013-07-09_19:43:59.png "conky")
+![conky](https://raw.github.com/cgoldberg/conky-config/master/Screenshot from 2013-07-10 13:36:57.png "conky")
+![conky](https://raw.github.com/cgoldberg/conky-config/master/Screenshot from 2013-07-10 13:42:38.png "conky")
