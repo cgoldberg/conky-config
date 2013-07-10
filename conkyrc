@@ -49,11 +49,11 @@ ${top name 4} $alignr ${top cpu 4} %
 ${top name 5} $alignr ${top cpu 5} %
 
 ${font sans-serif:bold:size=8}${color FFCC00}TOP PROCS (MEM) $stippled_hr
-${font sans-serif:normal:size=8}${color FFFFCC}${top_mem name 1} $alignr ${top mem 1} %
-${top_mem name 2} $alignr ${top mem 2} %
-${top_mem name 3} $alignr ${top mem 3} %
-${top_mem name 4} $alignr ${top mem 4} %
-${top_mem name 5} $alignr ${top mem 5} %
+${font sans-serif:normal:size=8}${color FFFFCC}${top_mem name 1} $alignr ${top_mem mem 1} %
+${top_mem name 2} $alignr ${top_mem mem 2} %
+${top_mem name 3} $alignr ${top_mem mem 3} %
+${top_mem name 4} $alignr ${top_mem mem 4} %
+${top_mem name 5} $alignr ${top_mem mem 5} %
 
 ${font sans-serif:bold:size=8}${color FFCC00}DISK I/O $stippled_hr
 ${font sans-serif:normal:size=8}${color FFFFCC}Read: $alignr $diskio_read
