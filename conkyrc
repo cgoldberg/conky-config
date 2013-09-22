@@ -1,23 +1,26 @@
+alignment top_right
 background yes
 update_interval 2.0
 total_run_times 0
 use_xft yes
 own_window yes
 own_window_transparent yes
-own_window_type normal
+own_window_type override
 own_window_hints undecorated,below,skip_pager,skip_taskbar
+own_window_class Conky
+own_window_transparent yes
 double_buffer yes
 draw_shades no
 draw_outline no
 draw_borders no
 draw_graph_borders yes
-alignment top_right
 gap_x 15
 gap_y 40
 no_buffers yes
 uppercase no
 cpu_avg_samples 2
 override_utf8_locale no
+
 
 TEXT
 ${font sans-serif:bold:size=8}${color FFCC00}SYSTEM $stippled_hr
@@ -31,7 +34,8 @@ Running: $alignr $running_processes
 Load Avg: $alignr $loadavg
 
 ${font sans-serif:bold:size=8}${color FFCC00}PROCESSORS $stippled_hr
-${font sans-serif:normal:size=8}${color FFFFCC}CPU0: ${cpu cpu0} % ${cpubar cpu0}
+${font sans-serif:normal:size=8}${color FFFFCC}CPU History:
+${cpugraph 25,0 -t}
 CPU1: ${cpu cpu1} % ${cpubar cpu1}
 CPU2: ${cpu cpu2} % ${cpubar cpu2}
 CPU3: ${cpu cpu3} % ${cpubar cpu3}
@@ -47,13 +51,13 @@ ${top name 2} $alignr ${top cpu 2} %
 ${top name 3} $alignr ${top cpu 3} %
 ${top name 4} $alignr ${top cpu 4} %
 ${top name 5} $alignr ${top cpu 5} %
+${top name 6} $alignr ${top cpu 6} %
 
 ${font sans-serif:bold:size=8}${color FFCC00}TOP PROCS (MEM) $stippled_hr
 ${font sans-serif:normal:size=8}${color FFFFCC}${top_mem name 1} $alignr ${top_mem mem 1} %
 ${top_mem name 2} $alignr ${top_mem mem 2} %
 ${top_mem name 3} $alignr ${top_mem mem 3} %
 ${top_mem name 4} $alignr ${top_mem mem 4} %
-${top_mem name 5} $alignr ${top_mem mem 5} %
 
 ${font sans-serif:bold:size=8}${color FFCC00}MEMORY $stippled_hr
 ${font sans-serif:normal:size=8}${color FFFFCC}RAM $alignc $mem / $memmax $alignr $memperc %
@@ -63,12 +67,12 @@ ${font sans-serif:normal:size=8}${color FFFFCC}/ $alignc ${fs_used /} / ${fs_siz
 
 ${font sans-serif:bold:size=8}${color FFCC00}DISK I/O $stippled_hr
 ${font sans-serif:normal:size=8}${color FFFFCC}Read: $alignr $diskio_read
-${diskiograph_read}
+${diskiograph_read 20,0 -t}
 ${font sans-serif:normal:size=8}${color FFFFCC}Write: $alignr $diskio_write
-${diskiograph_write}
+${diskiograph_write 20,0 -t}
 
 ${font sans-serif:bold:size=8}${color FFCC00}NETWORK $stippled_hr
 ${font sans-serif:normal:size=8}${color FFFFCC}Download: $alignr ${downspeed eth0}/s
-${downspeedgraph eth0}
+${downspeedgraph eth0 20,0 -t}
 ${font sans-serif:normal:size=8}${color FFFFCC}Upload: $alignr ${upspeed eth0}/s
-${upspeedgraph eth0}
+${upspeedgraph eth0 20,0 -t}
