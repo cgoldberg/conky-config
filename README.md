@@ -1,10 +1,18 @@
-conky-config
-============
+# conky-config
 
-Conky Configurations
+#### cgoldberg's Conky Configuration
 
-----
+---
 
-![conky](https://raw.github.com/cgoldberg/conky-config/master/Screenshot from 2013-07-10 13:42:38.png "conky")
-![conky](https://raw.github.com/cgoldberg/conky-config/master/Screenshot from 2013-07-10 13:36:57.png "conky")
-![conky](https://raw.github.com/cgoldberg/conky-config/master/Screenshot from 2013-07-11 10:38:08.png "conky")
+instructions:
+
+- install conky:
+  - `$ sudo apt-get install conky`
+- replace your `~/.conkyrc` with the `.conkyrc` from this repo.
+- tweak the configuration for CPU, disk, and network interfaces to match your setup.
+
+---
+
+![conky](https://raw.github.com/cgoldberg/conky-config/master/conky-screenshot1.png "conky")
+![conky](https://raw.github.com/cgoldberg/conky-config/master/conky-screenshot2.png "conky")
+![conky](https://raw.github.com/cgoldberg/conky-config/master/conky-screenshot3.png "conky")
